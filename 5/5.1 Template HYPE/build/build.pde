@@ -1,5 +1,7 @@
 import hype.*;
-
+// red: newmedia
+// pass: nomelase
+// Rectangulo de HYPE
 HRect d;
 
 void setup() {
@@ -11,13 +13,11 @@ void setup() {
     d = new HRect();
     d.strokeWeight(2)
       .fill(#333333)
-      //.fill( (int) random(255), (int) random(255), (int) random(255)  )
       .stroke(#ff3300)
-      .size( (int) random(25, 125) )
-      .rotate( (int) random(360) )
+      .size( (int) random(25, 225) )
+      //.rotate( (int) random(360) )
       .anchorAt( H.CENTER )
-      .loc( (int) random(width), (int) random(height) )
-    ;
+      .loc( (int) random(width), (int) random(height) );
     
     H.add(d);
    }

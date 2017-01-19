@@ -1,11 +1,16 @@
+import processing.pdf.*;
+
 import hype.*;
 import hype.extended.layout.HGridLayout;
 import hype.extended.colorist.*;
+
+
 
 HDrawablePool pool;
 HColorPool colors;
 
 void setup(){
+   
   size(600,600);
   H.init(this).background(#202020);
 
@@ -53,4 +58,22 @@ void keyReleased(){
   if(key == 's' || key == 'S'){
     saveFrame("frames/###.jpg");
   }
+  
+  if(key == 'p'){
+    saveVector();
+  }
+ 
+}
+
+void saveVector() {
+  PGraphics tmp = null;
+  tmp = beginRecord(PDF, "frames/render##.pdf");
+  textMode(MODEL);
+  if (tmp == null) {
+    H.drawStage();
+  } else {
+    H.stage().paintAll(tmp, false, 1); // PGraphics, uses3D, alpha
+  }
+
+  endRecord();
 }

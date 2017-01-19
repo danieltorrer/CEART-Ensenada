@@ -8,22 +8,21 @@ HDrawablePool pool;
 HColorPool colors;
 
 void setup(){
-  size(600, 600);
+  size(800, 600);
   
   H.init(this).background(#625182);
 
   colors = new HColorPool(#6D8E9E,#9AA5A2,#A5B6B6);
   
-  pool = new HDrawablePool(1000);
+  pool = new HDrawablePool(500);
   
   pool.autoAddToStage()
-    .add(new HShape("triangle.svg"))
-    .add(new HShape("svg1.svg"))
+    .add(new HShape("svg7.svg"))
 
     .layout(
       new HShapeLayout()
       .target(
-        new HImage("hey.png")
+        new HImage("daniel.png")
       )
     )
 
@@ -35,7 +34,7 @@ void setup(){
             .enableStyle(false)
             .noStroke()
             .anchorAt(H.CENTER)
-            .rotate( int(random(0, 360)))
+            .rotate( 0 )
             .size( (int)random(0, 20) )
           ;
           d.randomColors(colors.fillAndStroke());

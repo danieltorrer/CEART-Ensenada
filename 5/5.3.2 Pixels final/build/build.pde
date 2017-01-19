@@ -5,12 +5,12 @@ HRect d;
 HPixelColorist colors;
 
 void setup(){
-  size(600, 600);
+  size(1600, 1600);
   H.init(this).background(#202020);
 
   //H.add( new HImage("gameboy.gif") );
 
-  colors = new HPixelColorist("gameboy.gif");
+  colors = new HPixelColorist("bg.jpg");
   //colors = new HPixelColorist("gameboy.gif").fillOnly();
   //colors = new HPixelColorist("gameboy.gif").strokeOnly();
   //colors = new HPixelColorist("gameboy.gif").fillAndStroke();
@@ -25,9 +25,9 @@ void setup(){
       //.stroke( ) 
       //.fill( colors.getColor( d.x(), d.y() ), 100 )
       //.stroke( colors.getColor( d.x(), d.y() ) )
-      .alpha(100)
-      .size( (int) random(25, 75) )
-      .rotate( (int) random(360) )
+      .alpha(200)
+      .size( (int) random(25, 30) )
+      .rotate( 45 )
       .anchorAt(H.CENTER)
     ;
 
